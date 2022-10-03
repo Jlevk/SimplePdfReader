@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.example.pdfviewerappkotlin"
+        applicationId "by.Jlevk.Books"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -33,7 +33,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    //Minha edição - My Edition
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.github.kk121:File-Loader:1.2'
     implementation 'com.karumi:dexter:5.0.0'

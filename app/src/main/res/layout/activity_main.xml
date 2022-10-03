@@ -6,39 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_view_assets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="406dp"
-        android:text="View From Assets"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_asset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="-35dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="410dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="698dp"
+            android:background="#8F9E00"
+            android:text="Back to books"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            />
+
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="411dp"
+        android:layout_height="665dp"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_view_storage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <Button
         android:id="@+id/btn_view_storage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="424dp"
+        android:layout_height="57dp"
         android:layout_marginStart="127dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="127dp"
+        android:background="#9321EB"
         android:text="View From Device"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_assets" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btn_view_internet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="127dp"
-        android:text="View From Internet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_storage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
